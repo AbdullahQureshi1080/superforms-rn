@@ -1,0 +1,72 @@
+{
+  "name": "@superforms/superforms-rn",
+  "version": "0.0.0-development",
+  "description": "Super forms using formik and yup in react-native with built-in ready to use form components that are customizable",
+  "main": "dist\\module\\index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "bob build",
+    "semantic-release": "semantic-release",
+    "commit": "git cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdullahQureshi1080/SuperFormsRN.git"
+  },
+  "dependencies": {
+    "formik": "^2.2.9",
+    "moment": "^2.29.4",
+    "react-native-vector-icons": "^9.2.0",
+    "yup": "^0.32.11"
+  },
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-native": "0.70.1"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "react-native-builder-bob": "^0.18.3",
+    "semantic-release": "^19.0.5",
+    "typescript": "^4.8.3"
+  },
+  "keywords": [
+    "forms",
+    "formik",
+    "yup",
+    "react-native"
+  ],
+  "author": "Abdullah Qureshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbdullahQureshi1080/SuperFormsRN/issues"
+  },
+  "homepage": "https://github.com/AbdullahQureshi1080/SuperFormsRN#readme",
+  "react-native": "dist\\module\\index.js",
+  "module": "dist\\module\\index.js",
+  "types": "dist\\typescript\\src\\index.d.ts",
+  "files": [
+    "src",
+    "dist",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "./"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "dist",
+    "targets": [
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
