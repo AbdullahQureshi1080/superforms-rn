@@ -1,6 +1,6 @@
 {
   "name": "superformsrn",
-  "version": "0.0.0-development",
+  "version": "0.0.0-example",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -14,13 +14,9 @@
     "my-android-mac": " ./scripts/remove.sh"
   },
   "dependencies": {
-    "@superforms/superforms-rn": "file:src/components/superforms-superforms-rn-0.0.1.tgz",
-    "formik": "^2.2.9",
-    "moment": "^2.29.4",
+    "@superforms/superforms-rn": "^1.0.2",
     "react": "18.1.0",
-    "react-native": "0.70.1",
-    "react-native-vector-icons": "^9.2.0",
-    "yup": "^0.32.11"
+    "react-native": "0.70.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -35,12 +31,10 @@
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^26.6.3",
     "babel-plugin-module-resolver": "^4.1.0",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.72.1",
     "react-test-renderer": "18.1.0",
-    "semantic-release": "^19.0.5",
     "typescript": "^4.8.3"
   },
   "jest": {
@@ -56,14 +50,5 @@
     "modulePathIgnorePatterns": [
       "<rootDir>/lib/"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AbdullahQureshi1080/SuperFormsRN.git"
   }
 }
