@@ -22,5 +22,6 @@
     // "declaration": true,
     "noEmit": false,
     "emitDeclarationOnly": false
-  }
+  },
+  "exclude": ["example"]
 }
