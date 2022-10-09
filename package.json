@@ -20,8 +20,8 @@
     "yup": "^0.32.11"
   },
   "peerDependencies": {
-    "react": "18.1.0",
-    "react-native": "0.70.1"
+    "react": ">=16.13.1",
+    "react-native": ">=0.63.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.21",
