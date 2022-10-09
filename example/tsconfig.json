@@ -1,0 +1,25 @@
+// prettier-ignore
+{
+  
+  "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  "baseUrl": ".",
+  "paths": {
+      "@Components":["./src/components/src"],
+    },
+    /* Completeness */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "useUnknownInCatchVariables": false,
+    // "declaration": true,
+    "noEmit": false,
+    "emitDeclarationOnly": false
+  },
+  "exclude": [
+    "**/__tests__/*",
+  ],
+}
