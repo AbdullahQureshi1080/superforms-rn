@@ -1,11 +1,13 @@
-# **Super forms (React-Native)** 😎
+
+
+# **Super forms (React-Native)** 🚀
+
 
 Super forms using formik and yup in react-native with built-in ready to use form components that are customizable. 
 
 <br/>
 
-## **What We doing & Why** 
-----------------------
+## **What We doing & Why** 💭
 
 Almost all sorts of mobile applications have forms in them whether we call the forms or not, and boy after a few user actions it becomes redundant to write the same code again. The pain point is that for each form input you have to have a field state whether explicitly defined or implicitly with additional error and validation checks, this makes having to manage a lot of states and effects. 
 
@@ -15,15 +17,17 @@ We broke down the formik form usage into multiple components each with its uniqu
 
 <br/>
 
-## **Superforms in action**
-----------------------
+## **Superforms in action**  📲
+
 
 <img src="docs/superform.gif" width="300" height="600" style=" border-radius:3px; margin-top: 10px; margin-bottom:10px "/>
 
+
+
+
 <br/>
 
-## **Installation** 
-----------------------
+## **Installation**  🏗️
 
 ```bash
 npm i @superforms/superforms-rn
@@ -32,8 +36,7 @@ npm i @superforms/superforms-rn
 
 <br/>
 
-## **How it works**
-----------------------
+## **How it works** 💻
 
 ```js
 import React from 'react';
@@ -72,10 +75,11 @@ const validationSchema = Yup.object().shape({
 export default App;
 ```
 
+
 <br/>
 
-## **Components Props**
-----------------------
+## **Components Props** 📦
+
   <br/>
 
 * ### **Form**
@@ -117,24 +121,25 @@ export default App;
 
 
 
-## **Contributers**
-----------------------
+## **Contributers** 😎
 
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/AbdullahQureshi1080"><img src="https://avatars.githubusercontent.com/u/55753562?s=400&u=97e2fffdc0b41fc7d0dec0c4ea3c19f17303ece6&v=4" width="100px;" alt=""/><br /><sub><b>Abdullah Najam Qureshi</b></sub></a><br /><a href="#question-abdullahqureshi1080" title="Answering Questions">💬</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits" title="Documentation">📖</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/pulls?q=is%3Apr+closed+reviewed-by%3A%40me+" title="Reviewed Pull Requests">👀</a> 
+      <td align="center"><a href="https://github.com/AbdullahQureshi1080"><img src="https://avatars.githubusercontent.com/u/55753562?s=400&u=97e2fffdc0b41fc7d0dec0c4ea3c19f17303ece6&v=4" width="100px;" alt=""/><br /><sub><b>Abdullah Najam Qureshi</b></sub></a><br /><a href="#question-abdullahqureshi1080" title="Answering Questions">💬</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits/docs?author=abdullahqureshi1080" title="Documentation">📖</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/pulls?q=is%3Apr+closed+reviewed-by%3A%40me+" title="Reviewed Pull Requests">👀</a> 
    <a href="#maintenance-abdullahqureshi1080" title="Maintenance">🚧</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits?author=abdullahqureshi1080" title="Code">💻</a> <a href="#design-abdullahqureshi1080" title="Design">🎨</a></td>
-      <td align="center"><a href="https://github.com/Faseeh-Abbas-Khan"><img src="https://avatars.githubusercontent.com/u/33255564?v=4" width="100px;" alt=""/><br /><sub><b>Faseeh Abbas Khan</b></sub></a><br /><a href="#question-faseehabbas" title="Answering Questions">💬</a> <a href="https://github.com/all-contributors/all-contributors/commits?author=faseehabbas" title="Documentation">📖</a> 
-     <a href="#maintenance-faseehabbas" title="Maintenance">🚧</a> <a href="https://github.com/@Faseeh-Abbas-Khan/superforms-rn/commits?" title="Code">💻</a> <a href="#design-faseehabbas" title="Design">🎨</a></td>
+      <td align="center"><a href="https://github.com/Faseeh-Abbas-Khan"><img src="https://avatars.githubusercontent.com/u/33255564?v=4" width="100px;" alt=""/><br /><sub><b>Faseeh Abbas Khan</b></sub></a><br /><a href="#question-faseehabbas" title="Answering Questions">💬</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits/docs?author=Faseeh-Abbas-Khan" title="Documentation">📖</a> 
+     <a href="#maintenance-faseehabbas" title="Maintenance">🚧</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits?author=Faseeh-Abbas-Khan" title="Code">💻</a> <a href="#design-faseehabbas" title="Design">🎨</a></td>
     </tr>
     <tr>
 
   </tbody>
 </table>
 
-## **In Progress**
-----------------------
+<br/>
+
+
+## **In Progress** 🚧 👷
 
   * TDD: Testing 
   * More Form Components
@@ -146,12 +151,12 @@ export default App;
 
   **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
 
+<br/>
 
 
-## **Contributing** 
-----------------------
+## **Contributing**  💗
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
@@ -161,16 +166,15 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
-
+<br/>
 
 ## **Acknowledgments**
-----------------------
 
 * [Formik](https://github.com/jaredpalmer/formik)
 * [Yup](https://github.com/jquense/yup)
 
 <br/>
 
-#### **Consider supporting with a ⭐️ on GitHub**
+## **Consider supporting with a ⭐️ on GitHub**
 
-
+If you find ```@superforms``` helpful a star would be awesome, we appreciate the support and motivation. 
