@@ -63,10 +63,10 @@ const validationSchema = Yup.object().shape({
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
         enableReinitialize={true}>
-        <FormField name="email" label="Email" />
-        <FormField name="password" label="Password" />
-        <FormField name="fullName" label="Full Name" />
-        <SubmitButton name="Login" />
+          <FormField name="email" label="Email" />
+          <FormField name="password" label="Password" />
+          <FormField name="fullName" label="Full Name" />
+          <SubmitButton name="Login" />
       </Form>
     </SafeAreaView>
   );
