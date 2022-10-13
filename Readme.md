@@ -58,16 +58,16 @@ const validationSchema = Yup.object().shape({
 
   return (
     <SafeAreaView style={{backgroundColor: '#f8f8f8', flex: 1}}>
-          <Form
-            initialValues={{email: '', fullName: '', password: ''}}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-            enableReinitialize={true}>
-            <FormField name="email" label="Email" />
-            <FormField name="password" label="Password" />
-            <FormField name="fullName" label="Full Name" />
-            <SubmitButton name="Login" />
-          </Form>
+      <Form
+        initialValues={{email: '', fullName: '', password: ''}}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+        enableReinitialize={true}>
+        <FormField name="email" label="Email" />
+        <FormField name="password" label="Password" />
+        <FormField name="fullName" label="Full Name" />
+        <SubmitButton name="Login" />
+      </Form>
     </SafeAreaView>
   );
 };
@@ -144,8 +144,12 @@ export default App;
   * TDD: Testing 
   * More Form Components
     * Dropdown Picker
+    * Country Picker
     * Date Picker
     * Modal Picker
+    * Radio Form
+    * Checkboxes
+    * Image Picker
   * Docs Support 
   * Refactoring ~ making all unnecesary props as optional 
 
