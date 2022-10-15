@@ -88,9 +88,9 @@ export default App;
 
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
-    | initialValues  | FormikValues  | These are the initial values for the form            | yes
-    | validationSchema  | Object  |  The validation scheme for you form values this needs to be initialized as through ``` Yup.Object().shape({})``` | yes
-    | enableReinitialize  | Boolean  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality``` | yes
+    | initialValues  | ```FormikValues```  | These are the initial values for the form.            | Yes
+    | validationSchema  | ```Object```  |  The validation scheme for you form values this needs to be initialized as through ``` Yup.Object().shape({})```. | Yes
+    | enableReinitialize  | ```Boolean```  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality```. | Yes
 
     <br/>
 
@@ -100,7 +100,7 @@ export default App;
 
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
-    | name  | String  | The name of the form field, it could be any string value            | yes
+    | name  | ```String```  | The name of the form field, it could be any string value.            | Yes
 
     ``` More <FormField/> ``` [props](docs/components.md)
 
@@ -113,7 +113,7 @@ export default App;
 
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
-    | name  | String  | The name of the button, it could be any string value            | yes
+    | name  | ```String```  | The name of the button, it could be any string value.            | Yes
 
     ``` More <SubmitButton/> ``` [props](docs/components.md)
 

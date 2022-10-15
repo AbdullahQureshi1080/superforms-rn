@@ -16,7 +16,7 @@
   "dependencies": {
     "@superforms/superforms-rn": "^1.0.2",
     "react": "18.1.0",
-    "react-native": "0.70.1"
+    "react-native": "0.70.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
