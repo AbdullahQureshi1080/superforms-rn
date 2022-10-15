@@ -10,16 +10,21 @@
  */
 
 import React, {useRef} from 'react';
-import {SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
-
-// import {Form, FormField, SubmitButton} from '@Components';
-
-import {Form, FormField, SubmitButton} from '@superforms/superforms-rn';
+import {
+  Alert,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  Text,
+  View,
+} from 'react-native';
 
 // Supporting Imports
 import * as Yup from 'yup';
 
 import {FormikValues} from 'formik';
+
+import {Form, FormField, SubmitButton} from '@superforms/superforms-rn';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -27,18 +32,6 @@ const validationSchema = Yup.object().shape({
     .required('Password is required')
     .label('Password')
     .min(5),
-  // .test(
-  //   'strongPassword',
-  //   'The password must contain a minimum of eight characters with at least one uppercase, lowercase, number, and special character',
-  //   function (value: string | undefined) {
-  //     var format =
-  //       /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/;
-  //     if (format.test(value!)) {
-  //       return true;
-  //     }
-  //     return false;
-  //   },
-  // ),
   fullName: Yup.string().required('Name is required').label('Full Name'),
 });
 
@@ -47,6 +40,7 @@ const App = () => {
 
   const handleSubmit = (values: FormikValues) => {
     console.log('Values', values);
+    Alert.alert(JSON.stringify(values));
   };
 
   return (
