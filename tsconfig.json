@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "types": ["react-native"],
+    "types": ["react-native", "jest", "@types/jest"],
     "lib": ["es2019"],
     "allowJs": true,
     "jsx": "react-native",
@@ -23,5 +23,5 @@
     "noEmit": false,
     "emitDeclarationOnly": false
   },
-  "exclude": ["example"]
+  "exclude": ["example", "dist"]
 }

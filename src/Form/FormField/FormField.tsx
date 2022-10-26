@@ -1,19 +1,19 @@
 // Native Imports
-import React from 'react';
+import React from "react";
 
 // Supporting Imports
-import {useFormikContext} from 'formik';
+import { useFormikContext } from "formik";
 
-import Input, {InputProps} from '../../Common/Input/Input';
+import Input, { InputProps } from "../../Common/Input/Input";
 
 export interface FormFieldProps extends InputProps {
   name: string;
 }
 
 const FormField = (props: FormFieldProps) => {
-  const {setFieldTouched, touched, handleChange, errors, values} =
+  const { name, testID } = props;
+  const { setFieldTouched, touched, handleChange, errors, values } =
     useFormikContext();
-  const {name} = props;
 
   return (
     <Input
@@ -29,6 +29,7 @@ const FormField = (props: FormFieldProps) => {
       errorMessage={errors[name]}
       // @ts-ignore
       errorVisibility={touched[name]}
+      testID={testID}
     />
   );
 };
