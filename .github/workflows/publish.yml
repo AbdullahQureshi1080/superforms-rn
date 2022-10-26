@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i
+    - run: npm i --force
     - run: npm run test
     
   publish:
@@ -41,7 +41,7 @@ jobs:
          with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-       - run: npm i
+       - run: npm i --force
        - run: npm run semantic-release
          env: 
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
