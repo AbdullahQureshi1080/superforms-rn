@@ -141,7 +141,6 @@ export default App;
 
 ## **In Progress** 🚧 👷
 
-  * TDD: Testing 
   * More Form Components
     * Dropdown Picker
     * Country Picker
@@ -150,7 +149,15 @@ export default App;
     * Radio Form
     * Checkboxes
     * Image Picker
-  * Docs Support 
+
+  **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
+
+<br/>
+
+## **Worked On** ✅
+
+  * TDD: Test cases 
+  * Docs support 
   * Refactoring ~ making all unnecesary props as optional 
 
   **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
