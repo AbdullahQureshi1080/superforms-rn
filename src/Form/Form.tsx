@@ -1,15 +1,15 @@
 // Native Imports
-import React, {ReactNode} from 'react';
+import React, { ReactNode } from "react";
 
 // Formik Imports
-import {Formik, FormikHelpers, FormikValues} from 'formik';
+import { Formik, FormikHelpers, FormikValues } from "formik";
 
 export interface FormProps {
   initialValues: FormikValues;
   validationSchema: Object;
   children: ReactNode;
   onSubmit: (values: FormikValues, formikHelpers: FormikHelpers<any>) => void;
-  enableReinitialize: boolean;
+  enableReinitialize?: boolean;
 }
 
 const Form = (props: FormProps) => {
@@ -18,14 +18,15 @@ const Form = (props: FormProps) => {
     validationSchema,
     children,
     onSubmit,
-    enableReinitialize,
+    enableReinitialize = true,
   } = props;
   return (
     <Formik
       enableReinitialize={enableReinitialize}
       initialValues={initialValues}
       onSubmit={onSubmit}
-      validationSchema={validationSchema}>
+      validationSchema={validationSchema}
+    >
       {() => <>{children}</>}
     </Formik>
   );
