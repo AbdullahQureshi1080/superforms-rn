@@ -1,17 +1,11 @@
 module.exports = {
   root: true,
-  extends: ['@react-native-community/eslint-config', 'eslint-config-prettier'],
-  // extends: '@react-native-community',
+  extends: '@react-native-community',
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'detox'],
+  plugins: ['@typescript-eslint'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.e2e.js'],
-      env: {
-        'detox/detox': true,
-        jest: true,
-        'jest/globals': true,
-      },
+      files: ['*.ts', '*.tsx'],
       rules: {
         '@typescript-eslint/no-shadow': ['error'],
         'no-shadow': 'off',
@@ -19,7 +13,4 @@ module.exports = {
       },
     },
   ],
-  rules: {
-    'prettier/prettier': 0,
-  },
 };

@@ -1,7 +1,0 @@
-{
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.automationProfile.windows": {},
-  "terminal.integrated.automationProfile.linux": {},
-  "java.configuration.updateBuildConfiguration": "interactive"
-}

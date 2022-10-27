@@ -15,7 +15,7 @@ jest.mock("Dimensions");
 jest.mock("react-native/Libraries/Animated/NativeAnimatedHelper");
 
 // Note: test renderer must be required after react-native.
-import { fireEvent, render, waitFor } from "@testing-library/react-native";
+import { fireEvent, render } from "@testing-library/react-native";
 
 // Supporting Imports
 import * as Yup from "yup";
@@ -84,8 +84,7 @@ describe("Form", () => {
     const nameField = getByTestId("fullname-test-field");
     fireEvent.changeText(nameField, "Tony Alveraz");
     const submitButton = getByTestId("submit-test-button");
-    console.log("SUBMIT BUTTON PROPS", submitButton.props);
-    const button = getByTestId("test-button");
+    // const button = getByTestId("test-button");
     fireEvent.press(submitButton);
     // fireEvent.press(button);
     // expect(mockButton).toHaveBeenCalledTimes(1);
