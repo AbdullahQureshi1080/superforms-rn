@@ -90,7 +90,7 @@ export default App;
     | ----------- | :----: |:-------------- | :------------|
     | initialValues  | ```FormikValues```  | These are the initial values for the form.            | Yes
     | validationSchema  | ```Object```  |  The validation scheme for you form values this needs to be initialized as through ``` Yup.Object().shape({})```. | Yes
-    | enableReinitialize  | ```Boolean```  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality```. | Yes
+    | enableReinitialize  | ```Boolean```  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality```. | No
 
     <br/>
 
@@ -150,9 +150,6 @@ export default App;
     * Checkboxes
     * Image Picker
 
-  **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
-
-<br/>
 
 ## **Worked On** ✅
 
@@ -181,8 +178,8 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## **Acknowledgments**
 
-* [Formik](https://github.com/jaredpalmer/formik)
-* [Yup](https://github.com/jquense/yup)
+* [**Formik**](https://github.com/jaredpalmer/formik)
+* [**Yup**](https://github.com/jquense/yup)
 
 <br/>
 
