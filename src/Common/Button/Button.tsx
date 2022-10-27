@@ -6,15 +6,15 @@ import {
   ActivityIndicator,
   TouchableOpacityProps,
   Dimensions,
-} from 'react-native';
-import React, {ReactNode, useEffect} from 'react';
+} from "react-native";
+import React, { ReactNode, useEffect } from "react";
 
 // Styles Import
-import styles from './ButtonStyles';
-import {colors} from '../../assets/colors';
-import {Generic} from '../../assets/enums/Generic';
-import {ButtonEnums} from './ButtonEnums';
-import AppText from '../Text/AppText';
+import styles from "./ButtonStyles";
+import { colors } from "../../assets/colors";
+import { Generic } from "../../assets/enums/Generic";
+import { ButtonEnums } from "./ButtonEnums";
+import AppText from "../Text/AppText";
 
 export interface ButtonProps extends TouchableOpacityProps {
   containerStyle?: StyleProp<any>;
@@ -26,9 +26,10 @@ export interface ButtonProps extends TouchableOpacityProps {
   renderIcon?: () => ReactNode;
   type?: string;
   errorVisibility?: boolean;
-  iconPlacement?: 'LEFT' | 'RIGHT';
+  iconPlacement?: "LEFT" | "RIGHT";
   onPress?: (event: GestureResponderEvent) => void;
   iconOnly?: boolean;
+  testID?: string;
 }
 
 const Button = (props: ButtonProps) => {
@@ -42,14 +43,15 @@ const Button = (props: ButtonProps) => {
     type = ButtonEnums.PRIMARY,
     renderIcon,
     errorVisibility,
-    iconPlacement = 'RIGHT',
+    iconPlacement = "RIGHT",
     onPress,
     iconOnly = false,
+    testID,
   } = props;
 
   const styleButtonWithIcon: StyleProp<any> = {
-    flexDirection: iconPlacement === 'RIGHT' ? 'row-reverse' : 'row',
-    alignItems: 'center',
+    flexDirection: iconPlacement === "RIGHT" ? "row-reverse" : "row",
+    alignItems: "center",
   };
 
   const styleButtonWithError: StyleProp<any> = {
@@ -70,29 +72,29 @@ const Button = (props: ButtonProps) => {
 
   const calculateButtonWithBasedOnType = (): StyleProp<any> => {
     if (type === ButtonEnums.SMALL) {
-      return {width: Dimensions.get('window').width / 3};
+      return { width: Dimensions.get("window").width / 3 };
     }
     if (type === ButtonEnums.STEPPER) {
-      return {width: Dimensions.get('window').width / 4};
+      return { width: Dimensions.get("window").width / 4 };
     }
     if (type === ButtonEnums.MODAL) {
-      return {width: Dimensions.get('window').width / 1.75};
+      return { width: Dimensions.get("window").width / 1.75 };
     }
     if (type === ButtonEnums.PRIMARY) {
-      return {width: Dimensions.get('window').width / 1.15};
+      return { width: Dimensions.get("window").width / 1.15 };
     }
     if (type === ButtonEnums.ICON) {
-      return {width: Dimensions.get('window').width / 6};
+      return { width: Dimensions.get("window").width / 6 };
     }
     if (type === ButtonEnums.CUSTOM) {
-      return {width: Dimensions.get('window').width / 2.25};
+      return { width: Dimensions.get("window").width / 2.25 };
     }
   };
 
   useEffect(() => {
     if (iconOnly && !renderIcon) {
       console.warn(
-        `Button Component Warning: Please render a icon, renderIcon prop is must when iconOnly prop is ${iconOnly}`,
+        `Button Component Warning: Please render a icon, renderIcon prop is must when iconOnly prop is ${iconOnly}`
       );
     }
   }, [iconOnly, renderIcon]);
@@ -100,6 +102,7 @@ const Button = (props: ButtonProps) => {
   // => {
   return (
     <TouchableOpacity
+      testID={testID}
       disabled={disabled}
       style={[
         styles.containerStyle,
@@ -108,7 +111,8 @@ const Button = (props: ButtonProps) => {
         calculateButtonWithBasedOnType(),
         containerStyle,
       ]}
-      onPress={onPress}>
+      onPress={onPress}
+    >
       <View style={[styles.contentStyle, styleButtonWithIcon, contentStyle]}>
         {renderIcon ? renderIcon() : null}
         {loading ? (
@@ -121,7 +125,8 @@ const Button = (props: ButtonProps) => {
               styleButtonLabelWhenIconIsPresent,
               styleButtonLabelWhenDisabled,
               labelStyle,
-            ]}>
+            ]}
+          >
             {name}
           </AppText>
         )}

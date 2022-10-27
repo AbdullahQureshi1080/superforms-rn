@@ -1,21 +1,28 @@
 // Native Imports
-import React from 'react';
+import React from "react";
 
 // Supporting Imports
-import {useFormikContext} from 'formik';
+import { useFormikContext } from "formik";
 
 // Styles Import
-import Button, {ButtonProps} from '../../Common/Button/Button';
+import Button, { ButtonProps } from "../../Common/Button/Button";
 
 export interface SubmitButtonProps extends ButtonProps {
-  // name: string;
+  useSubmitForm?: boolean;
 }
 
 const SubmitButton = (props: SubmitButtonProps) => {
-  const {handleSubmit} = useFormikContext();
-  const {name} = props;
+  const { handleSubmit, submitForm } = useFormikContext();
+  const { name, testID, useSubmitForm } = props;
 
-  return <Button {...props} name={name} onPress={handleSubmit} />;
+  return (
+    <Button
+      {...props}
+      name={name}
+      onPress={useSubmitForm ? submitForm : handleSubmit}
+      testID={testID}
+    />
+  );
 };
 
 export default SubmitButton;

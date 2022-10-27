@@ -62,9 +62,3 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
-
-# SuperForm Ignores
-
-src/components/node_modules
-*.tgz
-src/components/dist

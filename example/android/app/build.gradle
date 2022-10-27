@@ -84,10 +84,6 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
-// React Native Vector Icons
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-
-
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -139,7 +135,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.superformsrn"
+        applicationId "com.awesometsproject"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

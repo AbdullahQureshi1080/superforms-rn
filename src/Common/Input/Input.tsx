@@ -1,10 +1,10 @@
-import {View, TextInput, StyleProp} from 'react-native';
-import React, {ReactNode} from 'react';
+import { View, TextInput, StyleProp } from "react-native";
+import React, { ReactNode } from "react";
 
 // Styles Import
-import styles from './InputStyles';
-import {colors} from '../../assets/colors';
-import AppText from '../Text/AppText';
+import styles from "./InputStyles";
+import { colors } from "../../assets/colors";
+import AppText from "../Text/AppText";
 
 export interface InputProps {
   value?: string;
@@ -19,11 +19,12 @@ export interface InputProps {
   autoFocus?: boolean;
   assistiveText?: string;
   renderIcon?: () => ReactNode;
-  iconPlacement?: 'LEFT' | 'RIGHT';
+  iconPlacement?: "LEFT" | "RIGHT";
   placeholder?: string;
   errorMessage?: string;
   errorVisibility?: boolean;
   showErrorMessage?: boolean;
+  testID?: string;
 }
 
 const Input = (props: InputProps) => {
@@ -39,17 +40,19 @@ const Input = (props: InputProps) => {
     assistiveText,
     assistiveTextStyle,
     renderIcon,
-    iconPlacement = 'LEFT',
+    iconPlacement = "LEFT",
     placeholder = label,
     errorMessage,
     errorVisibility,
     showErrorMessage = true,
     inputStyle,
+    testID,
   } = props;
 
+
   const styleInputWithIcon: StyleProp<any> = {
-    flexDirection: iconPlacement === 'RIGHT' ? 'row-reverse' : 'row',
-    alignItems: 'center',
+    flexDirection: iconPlacement === "RIGHT" ? "row-reverse" : "row",
+    alignItems: "center",
   };
 
   const styleInputWithError: StyleProp<any> = {
@@ -57,7 +60,10 @@ const Input = (props: InputProps) => {
   };
 
   return (
-    <View style={[styles.containerStyle, styleInputWithError, containerStyle]}>
+    <View
+      style={[styles.containerStyle, styleInputWithError, containerStyle]}
+      // testID={testID}
+    >
       {hideLabel ? null : (
         <AppText textStyle={[styles.labelStyle, labelStyle]}>{label}</AppText>
       )}
@@ -73,6 +79,7 @@ const Input = (props: InputProps) => {
           autoFocus={autoFocus}
           placeholder={placeholder}
           placeholderTextColor={colors.grey}
+          testID={testID}
         />
       </View>
       {assistiveText && !errorVisibility ? (

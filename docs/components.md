@@ -7,7 +7,7 @@
 | ----------- | :----: |:-------------- | :------------|
 | initialValues  | ```FormikValues or Object```  | These are the initial values for the form.            | Yes
 | validationSchema  | ```Object```  |  The validation scheme for you form values this needs to be initialized as through ``` Yup.Object().shape({})```. | Yes
-| enableReinitialize  | ```Boolean```  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality```. | Yes
+| enableReinitialize  | ```Boolean```  |  Control whether Formik should reset the form if the wrapped component props change ```using deep equality```. | No
 
 
 ## **Form Field**
@@ -51,6 +51,7 @@
     | renderIcon  |  ```()=><ReactNode/>``` | With this prop you can render a Icon within the form button.    | No
     | iconPlacement  |  ```LEFT or RIGHT``` | With this prop you can position the icon either on the left or the right side of the form button.  Default value is ```RIGHT```.   |  No
      | iconOnly  |  ```Boolean``` | With this prop you can only show icon on the form submit button. **Note:** please make sure to render a icon if this is true otherwise the form button will throw a warning but yes it should work.  | No
+     | useSubmitForm  |  ```Boolean``` | Instead of using formik's handle submit use submitForm instead  | No
 
 
 * ### **Style Props**
