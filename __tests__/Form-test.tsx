@@ -23,7 +23,6 @@ import * as Yup from "yup";
 import Form from "../src/Form/Form";
 import FormField from "../src/Form/FormField/FormField";
 import SubmitButton from "../src/Form/SubmitButton/SubmitButton";
-import { Button } from "../src";
 
 describe("Form", () => {
   const initialValues = {
@@ -40,7 +39,6 @@ describe("Form", () => {
     fullName: Yup.string().required("Name is required").label("Full Name"),
   });
   const mockSubmitHandler = jest.fn();
-  const mockButton = jest.fn();
 
   test("Success: Form Renders correctly", () => {
     const { getByTestId } = render(
@@ -74,7 +72,6 @@ describe("Form", () => {
           useSubmitForm={true}
           onPress={mockSubmitHandler}
         />
-        <Button name="test" onPress={mockButton} testID="test-button" />
       </Form>
     );
     const emailField = getByTestId("email-test-field");

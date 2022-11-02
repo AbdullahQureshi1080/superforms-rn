@@ -5,26 +5,17 @@ import React, { ReactNode } from "react";
 import styles from "./InputStyles";
 import { colors } from "../../assets/colors";
 import AppText from "../Text/AppText";
+import { errorStyle } from "../../Styles/BaseStyles";
+import { BaseProps } from "../../Utils/BaseProps";
 
-export interface InputProps {
+export interface InputProps extends BaseProps {
   value?: string;
   onChangeText?: (e: React.ChangeEvent | string) => void;
   editable?: boolean;
-  label?: string;
-  labelStyle?: StyleProp<any>;
-  containerStyle?: StyleProp<any>;
-  assistiveTextStyle?: StyleProp<any>;
   inputStyle?: StyleProp<any>;
-  hideLabel?: boolean;
   autoFocus?: boolean;
-  assistiveText?: string;
   renderIcon?: () => ReactNode;
   iconPlacement?: "LEFT" | "RIGHT";
-  placeholder?: string;
-  errorMessage?: string;
-  errorVisibility?: boolean;
-  showErrorMessage?: boolean;
-  testID?: string;
 }
 
 const Input = (props: InputProps) => {
@@ -47,22 +38,21 @@ const Input = (props: InputProps) => {
     showErrorMessage = true,
     inputStyle,
     testID,
+    placeholderColor = colors.grey,
   } = props;
-
 
   const styleInputWithIcon: StyleProp<any> = {
     flexDirection: iconPlacement === "RIGHT" ? "row-reverse" : "row",
     alignItems: "center",
   };
 
-  const styleInputWithError: StyleProp<any> = {
-    borderColor: errorVisibility && errorMessage ? colors.error : colors.grey,
-  };
-
   return (
     <View
-      style={[styles.containerStyle, styleInputWithError, containerStyle]}
-      // testID={testID}
+      style={[
+        styles.containerStyle,
+        errorStyle(errorVisibility, errorMessage),
+        containerStyle,
+      ]}
     >
       {hideLabel ? null : (
         <AppText textStyle={[styles.labelStyle, labelStyle]}>{label}</AppText>
@@ -78,7 +68,7 @@ const Input = (props: InputProps) => {
           cursorColor={styles.cursor.color}
           autoFocus={autoFocus}
           placeholder={placeholder}
-          placeholderTextColor={colors.grey}
+          placeholderTextColor={placeholderColor}
           testID={testID}
         />
       </View>
@@ -87,7 +77,7 @@ const Input = (props: InputProps) => {
           {assistiveText}
         </AppText>
       ) : null}
-      {errorVisibility && showErrorMessage ? (
+      {errorVisibility && showErrorMessage && errorMessage ? (
         <AppText textStyle={[styles.errorText, assistiveTextStyle]}>
           {errorMessage}
         </AppText>

@@ -23,6 +23,9 @@ We broke down the formik form usage into multiple components each with its uniqu
 <img src="docs/superform.gif" width="300" height="600" style=" border-radius:3px; margin-top: 10px; margin-bottom:10px "/>
 
 
+<br/>
+
+
 
 
 <br/>
@@ -33,6 +36,16 @@ We broke down the formik form usage into multiple components each with its uniqu
 npm i @superforms/superforms-rn
 ```
 **Note:** Make sure to have react version ```>=16.13.1```
+
+
+## **Date Picker Usage**  📅
+
+```bash
+npm i react-native-date-picker
+``````
+This packge is a peer dependency that you must have to use ```<FormDateSelector/>```, you can skip this if you do not need the date picker, but it would be great to install this so that you do not run into issues later. 
+
+<br/>
 
 <br/>
 
@@ -85,6 +98,7 @@ export default App;
 * ### **Form**
 
     <br/>
+
 
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
