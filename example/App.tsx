@@ -29,6 +29,7 @@ import {
   FormField,
   SubmitButton,
   FormDateSelector,
+  DatePickerEnums,
 } from '@superforms/superforms-rn';
 import DatePicker from './src/Build/BaseComponent';
 
@@ -71,12 +72,12 @@ const App = () => {
             enableReinitialize={true}>
             <FormField name="email" label="Email" />
             <FormField name="password" label="Password" />
-            <FormField name="fullName" label="Full Name" />
+            <FormField name="fullName" label="Full Name" disabled={true} />
             <FormDateSelector
               label="Birthdate"
               name="datepicker"
-              // date={new Date()}
-              // placeholder={'Please select a date'}
+              date={new Date()}
+              mode={DatePickerEnums.DATE}
             />
             <SubmitButton name="Login" />
           </Form>

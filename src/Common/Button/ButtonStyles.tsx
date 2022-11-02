@@ -1,7 +1,9 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../assets/colors";
+import baseStyles from "../../Styles/BaseStyles";
 
 const styles = StyleSheet.create({
+  ...baseStyles,
   labelStyle: {
     fontSize: 16,
     color: colors.text,
@@ -23,22 +25,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-  },
-  input: {
-    fontSize: 16,
-    color: colors.text,
-    width: "95%",
-  },
-  cursor: {
-    color: colors.grey,
-  },
-  assistiveText: {
-    fontSize: 12,
-    color: colors.grey,
-  },
-  errorText: {
-    fontSize: 12,
-    color: colors.error,
   },
 });
 

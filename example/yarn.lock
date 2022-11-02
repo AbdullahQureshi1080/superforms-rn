@@ -1624,7 +1624,7 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@superforms/superforms-rn@file:../superforms-superforms-rn-0.0.0-development.tgz":
-  "integrity" "sha512-8bo1nn8t/Y7faAqmc9pG1e8ZGG2HkTuZmKVl7IhJGQcbuQi2n6dDcCUT8/+W3B00PbhHWx27z5hohIlSQY5Vmg=="
+  "integrity" "sha512-vah4gjeJLR3x4Xqm3TEsll3ixBqS+/E1tpePR2PGCaZ0F5NsL50Or1IX+wHmnT7dw+m3CG8/X6beTniuKOVhvw=="
   "resolved" "file:../superforms-superforms-rn-0.0.0-development.tgz"
   "version" "0.0.0-development"
   dependencies:
