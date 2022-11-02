@@ -22,7 +22,7 @@ const Input = (props: InputProps) => {
   const {
     value,
     onChangeText,
-    editable,
+    disabled,
     label,
     containerStyle,
     labelStyle,
@@ -63,7 +63,7 @@ const Input = (props: InputProps) => {
           {...props}
           value={value}
           onChangeText={onChangeText}
-          editable={editable}
+          editable={disabled}
           style={[styles.inputStyle, inputStyle]}
           cursorColor={styles.cursor.color}
           autoFocus={autoFocus}

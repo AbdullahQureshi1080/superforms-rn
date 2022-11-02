@@ -8,7 +8,6 @@ export interface BaseProps {
     containerStyle?: StyleProp<any>;
     labelStyle?: StyleProp<any>;
     contentStyle?: StyleProp<any>;
-    datePickerStyle?: StyleProp<any>;
     disabled?: boolean;
     hideLabel?: boolean;
     assistiveText?: string;
