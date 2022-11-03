@@ -15,21 +15,16 @@ import { colors } from "../../assets/colors";
 import { Generic } from "../../assets/enums/Generic";
 import { ButtonEnums } from "./ButtonEnums";
 import AppText from "../Text/AppText";
+import { BaseProps } from "../../Utils/BaseProps";
 
-export interface ButtonProps extends TouchableOpacityProps {
-  containerStyle?: StyleProp<any>;
-  labelStyle?: StyleProp<any>;
-  contentStyle?: StyleProp<any>;
+export interface ButtonProps extends TouchableOpacityProps, BaseProps {
   name: string;
-  disabled?: boolean;
   loading?: boolean;
   renderIcon?: () => ReactNode;
   type?: string;
-  errorVisibility?: boolean;
   iconPlacement?: "LEFT" | "RIGHT";
   onPress?: (event: GestureResponderEvent) => void;
   iconOnly?: boolean;
-  testID?: string;
 }
 
 const Button = (props: ButtonProps) => {

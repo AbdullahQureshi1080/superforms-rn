@@ -23,6 +23,9 @@ We broke down the formik form usage into multiple components each with its uniqu
 <img src="docs/superform.gif" width="300" height="600" style=" border-radius:3px; margin-top: 10px; margin-bottom:10px "/>
 
 
+<br/>
+
+
 
 
 <br/>
@@ -34,6 +37,16 @@ npm i @superforms/superforms-rn
 ```
 **Note:** Make sure to have react version ```>=16.13.1```
 
+
+## **Date Picker Usage**  📅
+
+```bash
+npm i react-native-date-picker
+``````
+To use ```<FormDateSelector/>``` you must have to install this, you can skip it if you do not need the date picker, but it would be great to install this so that you do not run into issues later. 
+
+<br/>
+
 <br/>
 
 ## **How it works** 💻
@@ -41,15 +54,28 @@ npm i @superforms/superforms-rn
 ```js
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-import {Form, FormField, SubmitButton} from '@superforms/superforms-rn';
+import {
+  Form,
+  FormField,
+  SubmitButton,
+  FormDateSelector,
+  DatePickerEnums,
+} from '@superforms/superforms-rn';
 import * as Yup from 'yup';
 
 const App = () => {
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
-  password: Yup.string().required('Password is required').label('Password').min(5),
+  password: Yup.string()
+    .required('Password is required')
+    .label('Password')
+    .min(5),
   fullName: Yup.string().required('Name is required').label('Full Name'),
+  datepicker: Yup.date()
+    .required('Date is required')
+    .label('Birthdate')
+    .nullable(),
 });
 
   const handleSubmit = (values) => {
@@ -58,16 +84,27 @@ const validationSchema = Yup.object().shape({
 
   return (
     <SafeAreaView style={{backgroundColor: '#f8f8f8', flex: 1}}>
-      <Form
-        initialValues={{email: '', fullName: '', password: ''}}
+     <Form
+        initialValues={{
+          email: '',
+          fullName: '',
+          password: '',
+          datepicker: null,
+        }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
-        enableReinitialize={true}>
-          <FormField name="email" label="Email" />
-          <FormField name="password" label="Password" />
-          <FormField name="fullName" label="Full Name" />
-          <SubmitButton name="Login" />
-      </Form>
+      >
+        <FormField name="email" label="Email" />
+        <FormField name="password" label="Password" />
+        <FormField name="fullName" label="Full Name" disabled={true} />
+        <FormDateSelector
+          label="Birthdate"
+          name="datepicker"
+          date={new Date()}
+          mode={DatePickerEnums.DATE}
+        />
+        <SubmitButton name="Login" />
+     </Form>
     </SafeAreaView>
   );
 };
@@ -84,7 +121,6 @@ export default App;
 
 * ### **Form**
 
-    <br/>
 
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
@@ -96,8 +132,6 @@ export default App;
 
 * ### **FormField**
 
-    <br/>
-
     | Property | Type | Description | Required 
     | ----------- | :----: |:-------------- | :------------|
     | name  | ```String```  | The name of the form field, it could be any string value.            | Yes
@@ -106,6 +140,20 @@ export default App;
 
     <br/>
 
+
+* ### **FormDateSelector**
+
+
+  | Property | Type | Description | Required 
+  | ----------- | :----: |:-------------- | :------------|
+  | name  | ```String```  |  The name of the form field, it could be any string value.             | Yes
+  | date  | ```Date```  | The initial date for the date picker to begin with. This can be any  ```new Date()``` object.  | Yes
+
+  ``` More <FormDateSelector/> ``` [props](docs/components.md)
+
+ 
+ 
+<br/>
 
 * ### **Submit Button**
 

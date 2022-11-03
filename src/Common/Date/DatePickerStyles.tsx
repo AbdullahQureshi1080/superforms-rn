@@ -4,17 +4,16 @@ import baseStyles from "../../Styles/BaseStyles";
 
 const styles = StyleSheet.create({
   ...baseStyles,
-  contentContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  inputStyle: {
+  dateTextStyle: {
     fontSize: 16,
     color: colors.text,
-    width: "95%",
+    marginHorizontal: 4,
+    marginVertical: 8,
   },
-  cursor: {
+  datePickerStyle: { backgroundColor: colors.primary },
+  placeholderStyle: {
     color: colors.grey,
+    fontSize: 16,
   },
 });
 

@@ -24,7 +24,14 @@ import * as Yup from 'yup';
 
 import {FormikValues} from 'formik';
 
-import {Form, FormField, SubmitButton} from '@superforms/superforms-rn';
+import {
+  Form,
+  FormField,
+  SubmitButton,
+  FormDateSelector,
+  DatePickerEnums,
+} from '@superforms/superforms-rn';
+import DatePicker from './src/Build/BaseComponent';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -33,6 +40,10 @@ const validationSchema = Yup.object().shape({
     .label('Password')
     .min(5),
   fullName: Yup.string().required('Name is required').label('Full Name'),
+  datepicker: Yup.date()
+    .required('Date is required')
+    .label('Birthdate')
+    .nullable(),
 });
 
 const App = () => {
@@ -50,13 +61,24 @@ const App = () => {
         <Text style={{color: '#000'}}>renders:{renders}</Text>
         <View style={{marginTop: 20, marginBottom: 20}}>
           <Form
-            initialValues={{email: '', fullName: '', password: ''}}
+            initialValues={{
+              email: '',
+              fullName: '',
+              password: '',
+              datepicker: null,
+            }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
             enableReinitialize={true}>
             <FormField name="email" label="Email" />
             <FormField name="password" label="Password" />
-            <FormField name="fullName" label="Full Name" />
+            <FormField name="fullName" label="Full Name" disabled={true} />
+            <FormDateSelector
+              label="Birthdate"
+              name="datepicker"
+              date={new Date()}
+              mode={DatePickerEnums.DATE}
+            />
             <SubmitButton name="Login" />
           </Form>
         </View>
