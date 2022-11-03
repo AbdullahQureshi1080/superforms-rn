@@ -186,24 +186,21 @@ export default App;
 
 <br/>
 
-
 ## **In Progress** 🚧 👷
-
-  * More Form Components
-    * Dropdown Picker
-    * Country Picker
-    * Date Picker
-    * Modal Picker
-    * Radio Form
-    * Checkboxes
-    * Image Picker
+* More Form Components
+  * Dropdown Picker
+  * Country Picker
+  * Modal Picker
+  * Radio Form
+  * Checkboxes
+  * Image Picker
 
 
 ## **Worked On** ✅
-
+  * Date Picker
   * TDD: Test cases 
   * Docs support 
-  * Refactoring ~ making all unnecesary props as optional 
+  * Refactoring ~ Making all unnecesary props as optional 
 
   **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
 
