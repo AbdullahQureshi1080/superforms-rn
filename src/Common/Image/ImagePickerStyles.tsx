@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   containerStyle: {
+    ...baseStyles.containerStyle,
     width: Dimensions.get("window").width / 2 - 40,
     alignItems: "center",
   },
