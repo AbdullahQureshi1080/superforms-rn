@@ -58,7 +58,7 @@ export interface launchConfig {
   saveToPhotos: boolean;
   durationLimit: number;
   callback: (
-    e: React.ChangeEvent | string | ImagePickerResponse
+    e:  ImagePickerResponse
   ) => void | undefined;
   setImageURI: (e: string | undefined) => void;
   disableFeedbackAlerts: boolean;

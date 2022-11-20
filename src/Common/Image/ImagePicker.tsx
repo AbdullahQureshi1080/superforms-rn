@@ -35,10 +35,7 @@ export interface ImagePickerProps
     CameraOptions,
     BaseProps {
   imageUri?: string;
-  name?: string;
-  onChange: (
-    e: React.ChangeEvent | string | ImagePickerResponse
-  ) => void | undefined;
+  onChange?: (e: ImagePickerResponse) => void | undefined;
   imageProps?: ImageProps;
   imageStyles?: StyleProp<any>;
   placeholderImage?: string;
@@ -72,6 +69,7 @@ const ImagePicker = (props: ImagePickerProps) => {
     placeholderImage,
     placeholderImageStyles,
     disableFeedbackAlerts = true,
+    testID,
   } = props;
 
   const [imageURI, setImageURI] = useState<string | undefined>(
@@ -86,7 +84,7 @@ const ImagePicker = (props: ImagePickerProps) => {
     saveToPhotos,
     durationLimit,
     videoQuality,
-    callback: onChange,
+    callback: (e: ImagePickerResponse | Object) => onChange?.(e),
     setImageURI: (uri: string | undefined) => setImageURI(uri),
     disableFeedbackAlerts: disableFeedbackAlerts,
   };
@@ -109,7 +107,7 @@ const ImagePicker = (props: ImagePickerProps) => {
           text: "Yes",
           onPress: () => {
             setImageURI("");
-            onChange("");
+            onChange?.({});
           },
         },
         { text: "No" },
@@ -130,6 +128,7 @@ const ImagePicker = (props: ImagePickerProps) => {
         )}
         <Image
           {...imageProps}
+          testID={testID}
           source={
             imageURI
               ? { uri: imageURI }

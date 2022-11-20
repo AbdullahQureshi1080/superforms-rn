@@ -30,8 +30,10 @@ import {
   SubmitButton,
   FormDateSelector,
   DatePickerEnums,
+  FormImageSelector,
+  ImagePickerEnums,
 } from '@superforms/superforms-rn';
-import ImagePicker, {ImagePickerEnums} from './src/Build/BaseComponent';
+// import ImagePicker, {ImagePickerEnums} from './src/Build/BaseComponent';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -82,11 +84,11 @@ const App = () => {
               mode={DatePickerEnums.DATE}
             />
             {/* <View style={{flexDirection: 'row'}}> */}
-            <ImagePicker
+            <FormImageSelector
               label="Profile Image"
               name="imagepicker"
               mediaType={ImagePickerEnums.PHOTO}
-              onChange={res => console.log('IMAGE PICKER RES,', res)}
+              onChange={res => console.log('IMAGE YO RES,', res)}
               // imageProps={{resizeMode: 'stretch'}}
               // placeholderImageStyles={{tintColor: 'red'}}
             />
