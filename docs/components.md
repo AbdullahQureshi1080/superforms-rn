@@ -1,6 +1,5 @@
 # **Components Props**
 
-
 ## **Form**
 
 | Property | Type | Description | Required 
@@ -22,17 +21,6 @@
 | placeholder  |  ```String``` | The placeholder value for the form field.    | No
 | inputStyle  | ```StyleProp<any>```  | The styles for form ```<TextInput/>```  | No | [Styles](../src/Common/Input/InputStyles.tsx)
 
-<!-- | showErrorMessage  |  ```Boolean``` | The prop to hide the error message of the form field, although with this there will be no error message but still the form field will be highlighted in error state if there is a validation error.  | No
-| assistiveText  |  ```String``` | The prop to show assistive text under the text input, the error message overrides the assistive text when there is a validation error. | No -->
-
-<!-- * ### **Style Props**
-
-    | Property | Type | Description | Required  | Default  
-    | ----------- | :----: |:-------------- | :------------| :------------|
-    | labelStyle  | ```StyleProp<any>```  | The styles for the form label   | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | containerStyle  | ```StyleProp<any>```  | The styles for form input container, the ```<TextInput/>``` is inside a ```View``` with these styles.  | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | inputStyle  | ```StyleProp<any>```  | The styles for form ```<TextInput/>```  | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | assistiveTextStyle  | ```StyleProp<any>```  | The styles for assistive text or error message. | No | [Styles](../src/Common/Input/InputStyles.tsx) -->
 
 
 **Note:** Other than these custom props, all the props for ```<TextInput/>``` are supported, but as  ```value``` and ```onChangeText``` are configured to automatically get, set and update, you cannot use these. 
@@ -67,13 +55,6 @@
 | useSubmitForm  |  ```Boolean``` | Instead of using formik's handle submit use submitForm instead  | No
 | contentStyle  | ```StyleProp<any>```  | The styles for the inner content of the form button such as icon or the button label/name view.  | No | [Styles](../src/Common/Input/InputStyles.tsx)
 
-<!-- * ### **Style Props**
-
-    | Property | Type | Description | Required  | Default  
-    | ----------- | :----: |:-------------- | :------------| :------------|
-    | labelStyle  | ```StyleProp<any>```  | The styles for the form button label/name.   | No | [Styles](../src/Common/Button/ButtonStyles.tsx)
-    | containerStyle  | ```StyleProp<any>```  | The styles for form submit button. | No | [Styles](../src/Common/Button/ButtonStyles.tsx)
-    | contentStyle  | ```StyleProp<any>```  | The styles for the inner content of the form button such as icon or the button label/name view.  | No | [Styles](../src/Common/Input/InputStyles.tsx) -->
 
 **Note:** Other than these custom props, all the props for ```<TouchableOpacity/>``` are supported, but as  ```onPress```  is configured to handle form submit you cannot use this. 
 
