@@ -39,6 +39,21 @@
 
 <br/>
 
+## **Form Image Selector**
+| Property | Type | Description | Required 
+| ----------- | :----: |:-------------- | :------------|
+| name  | ```String```  | The name of the form field, it could be any string value.            | Yes
+| mediaType  | ```photo / video /  mixed```  | These can be the three types either a photo, video or mixed | Yes
+| onChange  | ```callback function```  | This function can retrive the value from the image picker whenever there is a new value | No
+| imageProps  | ```Object```  | These are be the props that are supported by the [image](https://reactnative.dev/docs/image) component of react-native | No
+| disableFeedbackAlerts  | ```Boolean```  | The feedback alerts from the image picker, the deafult value is ```true``` | No
+
+
+**Note:** All the [image picker properties](https://github.com/react-native-image-picker/react-native-image-picker) are also supported such as maxWidth, maxHeight, quality etc, 
+
+
+<br/>
+
 ## **Submit Button**
 
 <!-- * ### **Funtional Props** -->
