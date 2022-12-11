@@ -76,7 +76,7 @@ const App = () => {
             enableReinitialize={true}>
             <FormField name="email" label="Email" />
             <FormField name="password" label="Password" />
-            <FormField name="fullName" label="Full Name" disabled={true} />
+            <FormField name="fullName" label="Full Name" />
             <FormDateSelector
               label="Birthdate"
               name="datepicker"
