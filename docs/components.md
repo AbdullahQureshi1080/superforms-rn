@@ -1,6 +1,5 @@
 # **Components Props**
 
-
 ## **Form**
 
 | Property | Type | Description | Required 
@@ -22,17 +21,6 @@
 | placeholder  |  ```String``` | The placeholder value for the form field.    | No
 | inputStyle  | ```StyleProp<any>```  | The styles for form ```<TextInput/>```  | No | [Styles](../src/Common/Input/InputStyles.tsx)
 
-<!-- | showErrorMessage  |  ```Boolean``` | The prop to hide the error message of the form field, although with this there will be no error message but still the form field will be highlighted in error state if there is a validation error.  | No
-| assistiveText  |  ```String``` | The prop to show assistive text under the text input, the error message overrides the assistive text when there is a validation error. | No -->
-
-<!-- * ### **Style Props**
-
-    | Property | Type | Description | Required  | Default  
-    | ----------- | :----: |:-------------- | :------------| :------------|
-    | labelStyle  | ```StyleProp<any>```  | The styles for the form label   | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | containerStyle  | ```StyleProp<any>```  | The styles for form input container, the ```<TextInput/>``` is inside a ```View``` with these styles.  | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | inputStyle  | ```StyleProp<any>```  | The styles for form ```<TextInput/>```  | No | [Styles](../src/Common/Input/InputStyles.tsx)
-    | assistiveTextStyle  | ```StyleProp<any>```  | The styles for assistive text or error message. | No | [Styles](../src/Common/Input/InputStyles.tsx) -->
 
 
 **Note:** Other than these custom props, all the props for ```<TextInput/>``` are supported, but as  ```value``` and ```onChangeText``` are configured to automatically get, set and update, you cannot use these. 
@@ -48,6 +36,23 @@
 | dateFormat  | ```String```  | This can be any [moment](https://momentjs.com/) formated [value](https://momentjs.com/docs/#/parsing/string-format/). | No
 | mode  | ```String```  | Modes can be of three types, ```date, datetime``` or ```time```, if you like you can use these [enums](../src/Common/Date/DatePickerEnums.ts), ```Default``` mode is ```date``` | No
 | placeholderStyle  | ``StyleProp<any>``  | Styles for placeholder of the form date selector | No
+
+<br/>
+
+## **Form Image Selector**
+| Property | Type | Description | Required 
+| ----------- | :----: |:-------------- | :------------|
+| name  | ```String```  | The name of the form field, it could be any string value.            | Yes
+| mediaType  | ```photo / video /  mixed```  | These can be the three types either a photo, video or mixed | Yes
+| onChange  | ```callback function```  | This function can retrive the value from the image picker whenever there is a new value | No
+| imageProps  | ```Object```  | These are be the props that are supported by the [image](https://reactnative.dev/docs/image) component of react-native | No
+| disableFeedbackAlerts  | ```Boolean```  | The feedback alerts from the image picker, the deafult value is ```true``` | No
+| placeholderImage  | ```string```  | The image placholder string, it is a local asset  | No
+| placeholderImageStyles  | ```Object```  | The styles object for image placeholder | No
+| imageStyles  | ```Object```  | The styles object for image | No
+
+**Note:** All the [image picker properties](https://github.com/react-native-image-picker/react-native-image-picker) are also supported such as maxWidth, maxHeight, quality etc, 
+
 
 <br/>
 
@@ -67,13 +72,6 @@
 | useSubmitForm  |  ```Boolean``` | Instead of using formik's handle submit use submitForm instead  | No
 | contentStyle  | ```StyleProp<any>```  | The styles for the inner content of the form button such as icon or the button label/name view.  | No | [Styles](../src/Common/Input/InputStyles.tsx)
 
-<!-- * ### **Style Props**
-
-    | Property | Type | Description | Required  | Default  
-    | ----------- | :----: |:-------------- | :------------| :------------|
-    | labelStyle  | ```StyleProp<any>```  | The styles for the form button label/name.   | No | [Styles](../src/Common/Button/ButtonStyles.tsx)
-    | containerStyle  | ```StyleProp<any>```  | The styles for form submit button. | No | [Styles](../src/Common/Button/ButtonStyles.tsx)
-    | contentStyle  | ```StyleProp<any>```  | The styles for the inner content of the form button such as icon or the button label/name view.  | No | [Styles](../src/Common/Input/InputStyles.tsx) -->
 
 **Note:** Other than these custom props, all the props for ```<TouchableOpacity/>``` are supported, but as  ```onPress```  is configured to handle form submit you cannot use this. 
 

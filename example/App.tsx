@@ -30,8 +30,10 @@ import {
   SubmitButton,
   FormDateSelector,
   DatePickerEnums,
+  FormImageSelector,
+  ImagePickerEnums,
 } from '@superforms/superforms-rn';
-import DatePicker from './src/Build/BaseComponent';
+// import ImagePicker, {ImagePickerEnums} from './src/Build/BaseComponent';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -44,6 +46,7 @@ const validationSchema = Yup.object().shape({
     .required('Date is required')
     .label('Birthdate')
     .nullable(),
+  imagepicker: Yup.string().required(),
 });
 
 const App = () => {
@@ -66,19 +69,38 @@ const App = () => {
               fullName: '',
               password: '',
               datepicker: null,
+              imagepicker: '',
             }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
             enableReinitialize={true}>
             <FormField name="email" label="Email" />
             <FormField name="password" label="Password" />
-            <FormField name="fullName" label="Full Name" disabled={true} />
+            <FormField name="fullName" label="Full Name" />
             <FormDateSelector
               label="Birthdate"
               name="datepicker"
               date={new Date()}
               mode={DatePickerEnums.DATE}
             />
+            {/* <View style={{flexDirection: 'row'}}> */}
+            <FormImageSelector
+              label="Profile Image"
+              name="imagepicker"
+              mediaType={ImagePickerEnums.PHOTO}
+              onChange={res => console.log('IMAGE YO RES,', res)}
+              // imageProps={{resizeMode: 'stretch'}}
+              // placeholderImageStyles={{tintColor: 'red'}}
+            />
+            {/* <ImagePicker
+                label="Profile Image"
+                name="imagepicker"
+                mediaType={ImagePickerEnums.PHOTO}
+                onChange={res => console.log('IMAGE PICKER RES,', res)}
+                // imageProps={{resizeMode: 'contain'}}
+              /> */}
+            {/* </View> */}
+
             <SubmitButton name="Login" />
           </Form>
         </View>
