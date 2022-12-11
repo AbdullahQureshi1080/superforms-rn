@@ -47,7 +47,9 @@
 | onChange  | ```callback function```  | This function can retrive the value from the image picker whenever there is a new value | No
 | imageProps  | ```Object```  | These are be the props that are supported by the [image](https://reactnative.dev/docs/image) component of react-native | No
 | disableFeedbackAlerts  | ```Boolean```  | The feedback alerts from the image picker, the deafult value is ```true``` | No
-
+| placeholderImage  | ```string```  | The image placholder string, it is a local asset  | No
+| placeholderImageStyles  | ```Object```  | The styles object for image placeholder | No
+| imageStyles  | ```Object```  | The styles object for image | No
 
 **Note:** All the [image picker properties](https://github.com/react-native-image-picker/react-native-image-picker) are also supported such as maxWidth, maxHeight, quality etc, 
 
