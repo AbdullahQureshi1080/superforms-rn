@@ -63,7 +63,7 @@ const Input = (props: InputProps) => {
           {...props}
           value={value}
           onChangeText={onChangeText}
-          editable={disabled}
+          editable={!disabled}
           style={[styles.inputStyle, inputStyle]}
           cursorColor={styles.cursor.color}
           autoFocus={autoFocus}
