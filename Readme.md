@@ -43,11 +43,19 @@ npm i @superforms/superforms-rn
 ```bash
 npm i react-native-date-picker
 ``````
-To use ```<FormDateSelector/>``` you must have to install this, you can skip it if you do not need the date picker, but it would be great to install this so that you do not run into issues later. 
+
+
+## **Image Picker Usage**  🖼️
+
+```bash
+npm i react-native-image-picker
+``````
+
+Note: To use  ```<FormDateSelector/>``` or ```<FormImageSelector/>``` you must have to install either of the dependent libraries, you can skip it if you do not need the image picker or the date picker, but it would be great to install these so that you do not run into issues later. 
+
 
 <br/>
 
-<br/>
 
 ## **How it works** 💻
 
@@ -60,6 +68,8 @@ import {
   SubmitButton,
   FormDateSelector,
   DatePickerEnums,
+  FormImageSelector,
+  ImagePickerEnums,
 } from '@superforms/superforms-rn';
 import * as Yup from 'yup';
 
@@ -76,7 +86,9 @@ const validationSchema = Yup.object().shape({
     .required('Date is required')
     .label('Birthdate')
     .nullable(),
+  imagepicker: Yup.string().required(),
 });
+
 
   const handleSubmit = (values) => {
     console.log('Values', values);
@@ -90,6 +102,7 @@ const validationSchema = Yup.object().shape({
           fullName: '',
           password: '',
           datepicker: null,
+          imagepicker: '',
         }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
@@ -103,6 +116,14 @@ const validationSchema = Yup.object().shape({
           date={new Date()}
           mode={DatePickerEnums.DATE}
         />
+         <FormImageSelector
+            label="Profile Image"
+            name="imagepicker"
+            mediaType={ImagePickerEnums.PHOTO}
+            onChange={res => console.log('IMAGE YO RES,', res)}
+            imageProps={{resizeMode: 'stretch'}}
+            placeholderImageStyles={{tintColor: 'red'}}
+            />
         <SubmitButton name="Login" />
      </Form>
     </SafeAreaView>
@@ -155,6 +176,20 @@ export default App;
  
 <br/>
 
+* ### **FormImageSelector**
+
+
+  | Property | Type | Description | Required 
+  | ----------- | :----: |:-------------- | :------------|
+  | name  | ```String```  |  The name of the form field, it could be any string value.             | Yes
+  | getCompletePickerData  | ```Boolean```  | With this prop you can get the complete picker response. By default only the image URI is returned   | No
+
+  ``` More <FormImageSelector/> ``` [props](docs/components.md)
+
+ 
+ 
+<br/>
+
 * ### **Submit Button**
 
     <br/>
@@ -176,8 +211,8 @@ export default App;
     <tr>
       <td align="center"><a href="https://github.com/AbdullahQureshi1080"><img src="https://avatars.githubusercontent.com/u/55753562?s=400&u=97e2fffdc0b41fc7d0dec0c4ea3c19f17303ece6&v=4" width="100px;" alt=""/><br /><sub><b>Abdullah Najam Qureshi</b></sub></a><br /><a href="#question-abdullahqureshi1080" title="Answering Questions">💬</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits/docs?author=abdullahqureshi1080" title="Documentation">📖</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/pulls?q=is%3Apr+closed+reviewed-by%3A%40me+" title="Reviewed Pull Requests">👀</a> 
    <a href="#maintenance-abdullahqureshi1080" title="Maintenance">🚧</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits?author=abdullahqureshi1080" title="Code">💻</a> <a href="#design-abdullahqureshi1080" title="Design">🎨</a></td>
-      <td align="center"><a href="https://github.com/Faseeh-Abbas-Khan"><img src="https://avatars.githubusercontent.com/u/33255564?v=4" width="100px;" alt=""/><br /><sub><b>Faseeh Abbas Khan</b></sub></a><br /><a href="#question-faseehabbas" title="Answering Questions">💬</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits/docs?author=Faseeh-Abbas-Khan" title="Documentation">📖</a> 
-     <a href="#maintenance-faseehabbas" title="Maintenance">🚧</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits?author=Faseeh-Abbas-Khan" title="Code">💻</a> <a href="#design-faseehabbas" title="Design">🎨</a></td>
+      <td align="center"><a href="https://github.com/Faseeh-Abbas-Khan"><img src="https://avatars.githubusercontent.com/u/33255564?v=4" width="100px;" alt=""/><br /><sub><b>Faseeh Abbas Khan</b></sub></a><br />
+     <a href="#maintenance-faseehabbas" title="Maintenance">🚧</a> <a href="https://github.com/AbdullahQureshi1080/superforms-rn/commits?author=Faseeh-Abbas-Khan" title="Code">💻</a> </td>
     </tr>
     <tr>
 
@@ -186,24 +221,22 @@ export default App;
 
 <br/>
 
-
 ## **In Progress** 🚧 👷
+* More Form Components
+  * Dropdown Picker
+  * Country Picker
+  * Modal Picker
+  * Radio Form
+  * Checkboxes
 
-  * More Form Components
-    * Dropdown Picker
-    * Country Picker
-    * Date Picker
-    * Modal Picker
-    * Radio Form
-    * Checkboxes
-    * Image Picker
 
 
 ## **Worked On** ✅
-
+  * Image Picker
+  * Date Picker
   * TDD: Test cases 
   * Docs support 
-  * Refactoring ~ making all unnecesary props as optional 
+  * Refactoring ~ Making all unnecesary props as optional 
 
   **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
 
