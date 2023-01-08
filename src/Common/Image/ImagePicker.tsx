@@ -94,6 +94,15 @@ const ImagePicker = (props: ImagePickerProps) => {
     requestExternalWritePermission(alertConfigStorage);
   }, []);
 
+  useEffect(() => {
+    if (!imageUri) {
+      return;
+    }
+    if (typeof imageUri === "string") {
+      setImageURI(imageUri);
+    }
+  }, [imageUri]);
+
   const errorStyle = (ev: boolean, em: string | undefined): StyleProp<any> => {
     const borderColor = ev && em ? colors.error : colors.grey;
     return { ...styles.containerStyle, borderColor };
