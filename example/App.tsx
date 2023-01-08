@@ -72,10 +72,6 @@ const App = () => {
     }, 2000);
   }, []);
 
-  useEffect(() => {
-    console.log('Values Updated!', values);
-  }, [values]);
-
   return (
     <SafeAreaView style={{backgroundColor: '#f8f8f8', flex: 1}}>
       <StatusBar />
