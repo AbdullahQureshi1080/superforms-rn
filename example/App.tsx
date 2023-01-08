@@ -33,8 +33,6 @@ import {
   FormDate,
   FormImage,
 } from '@superforms/superforms-rn';
-// import BaseComponent from './src/Build/BaseComponent';
-// import ImagePicker, {ImagePickerEnums} from './src/Build/BaseComponent';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -92,19 +90,12 @@ const App = () => {
             <FormField name="email" label="Email" />
             <FormField name="password" label="Password" />
             <FormField name="fullName" label="Full Name" />
-            {/* <BaseComponent
-              label="Birthdate"
-              name="datepicker"
-              date={values.datepicker}
-              mode={DatePickerEnums.DATE}
-            /> */}
             <FormDate
               label="Birthdate"
               name="datepicker"
               date={values.datepicker}
               mode={DatePickerEnums.DATE}
             />
-          
             <FormImage
               label="Profile Image"
               name="imagepicker"
@@ -112,8 +103,8 @@ const App = () => {
               onChange={res => console.log('IMAGE YO RES,', res)}
               // imageProps={{resizeMode: 'stretch'}}
               // placeholderImageStyles={{tintColor: 'red'}}
+              imageUri={values.imagepicker}
             />
-         
             <SubmitButton name="Login" />
           </Form>
         </View>
