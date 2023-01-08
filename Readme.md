@@ -74,58 +74,67 @@ import {
 import * as Yup from 'yup';
 
 const App = () => {
+   const [values, setValues] = useState<FormikValues>({});
 
-const validationSchema = Yup.object().shape({
-  email: Yup.string().required('Email is required').email().label('Email'),
-  password: Yup.string()
-    .required('Password is required')
-    .label('Password')
-    .min(5),
-  fullName: Yup.string().required('Name is required').label('Full Name'),
-  datepicker: Yup.date()
-    .required('Date is required')
-    .label('Birthdate')
-    .nullable(),
-  imagepicker: Yup.string().required(),
-});
-
+   const validationSchema = Yup.object().shape({
+      email: Yup.string().required('Email is required').email().label('Email'),
+      password: Yup.string()
+      .required('Password is required')
+      .label('Password')
+      .min(5),
+      fullName: Yup.string().required('Name is required').label('Full Name'),
+      datepicker: Yup.date()
+      .required('Date is required')
+      .label('Birthdate')
+      .nullable(),
+      imagepicker: Yup.string().required(),
+  });
 
   const handleSubmit = (values) => {
     console.log('Values', values);
   };
 
+  useEffect(() => {
+    const valuesFromAPI = {
+      email: 'tonyAlveraz@gmail.com',
+      fullName: 'Tony Alveraz',
+      password: 'Test12345@',
+      datepicker: new Date('2022-03-25'),
+      imagepicker:
+        'https://images.unsplash.com/photo-1661961110218-35af7210f803?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    };
+    setTimeout(() => {
+      setValues(valuesFromAPI);
+    }, 2000);
+  }, []);
+
   return (
     <SafeAreaView style={{backgroundColor: '#f8f8f8', flex: 1}}>
      <Form
-        initialValues={{
-          email: '',
-          fullName: '',
-          password: '',
-          datepicker: null,
-          imagepicker: '',
-        }}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
+      initialValues={values}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
+      enableReinitialize={true}>
         <FormField name="email" label="Email" />
         <FormField name="password" label="Password" />
-        <FormField name="fullName" label="Full Name" disabled={true} />
-        <FormDateSelector
+        <FormField name="fullName" label="Full Name" />
+        <FormDate
           label="Birthdate"
           name="datepicker"
-          date={new Date()}
+          date={values.datepicker}
           mode={DatePickerEnums.DATE}
         />
-         <FormImageSelector
-            label="Profile Image"
-            name="imagepicker"
-            mediaType={ImagePickerEnums.PHOTO}
-            onChange={res => console.log('IMAGE YO RES,', res)}
-            imageProps={{resizeMode: 'stretch'}}
-            placeholderImageStyles={{tintColor: 'red'}}
-            />
+        <FormImage
+          label="Profile Image"
+          name="imagepicker"
+          mediaType={ImagePickerEnums.PHOTO}
+          onChange={res => console.log('IMAGE YO RES,', res)}
+          // imageProps={{resizeMode: 'stretch'}}
+          // placeholderImageStyles={{tintColor: 'red'}}
+          imageUri={values.imagepicker}
+        />
         <SubmitButton name="Login" />
-     </Form>
+      </Form>
     </SafeAreaView>
   );
 };
