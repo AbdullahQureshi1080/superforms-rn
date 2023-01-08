@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { StyleProp, Pressable, View } from "react-native";
 
@@ -31,7 +31,7 @@ const DatePicker = (props: DTProps) => {
     datePickerStyle,
     mode = DatePickerEnums.DATE,
     disabled = false,
-    date = new Date(),
+    date,
     maximumDate = new Date(),
     label,
     hideLabel = false,
@@ -52,7 +52,14 @@ const DatePicker = (props: DTProps) => {
 
   //   Date Picker State
   const [show, setShow] = useState(false);
-  const [dateInPicker, setDateInPicker] = useState<Date | null>(null);
+  const [dateInPicker, setDateInPicker] = useState<Date>(date);
+  const [defaultDate, setDefaultDate] = useState<Date>(new Date());
+
+  useEffect(() => {
+    if (date) {
+      setDateInPicker(date);
+    }
+  }, [date]);
 
   return (
     <Pressable
@@ -92,7 +99,7 @@ const DatePicker = (props: DTProps) => {
         style={[styles.datePickerStyle, datePickerStyle]}
         modal={modal}
         open={show}
-        date={date}
+        date={defaultDate}
         maximumDate={maximumDate}
         mode={mode}
         onDateChange={(changedDate) => {
@@ -109,6 +116,7 @@ const DatePicker = (props: DTProps) => {
           if (onDateChange) {
             onDateChange(changedDate);
           }
+          setDefaultDate(changedDate);
         }}
         onCancel={() => {
           setShow(false);
