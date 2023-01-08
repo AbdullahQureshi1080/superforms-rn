@@ -1626,7 +1626,7 @@
 "@superforms/superforms-rn@file:../superforms-superforms-rn-0.0.0-development.tgz":
   version "0.0.0-development"
   resolved "file:../superforms-superforms-rn-0.0.0-development.tgz"
-  integrity sha512-uEFRYmKWn8PcDRMIzgXijUn82RPcd75PeedJ/zYQB1ISevau5SyInKLxwYPnT7mJBxjnGzL/KmZjV3Ce3K3tBQ==
+  integrity sha512-bcbjgAcWLICEipGDxWhHqO1VSJ23TX3qjXhfmRtpe9AVHJC3o6tIa7cz7YsGImupfC+JH9pKXP3yg55LOL32nQ==
   dependencies:
     formik "^2.2.9"
     moment "^2.29.4"
