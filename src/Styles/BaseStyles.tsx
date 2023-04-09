@@ -35,7 +35,7 @@ const errorStyle = (
 ): StyleProp<any> => {
   const borderColor =
     errorVisibility && errorMessage ? colors.error : colors.grey;
-  return { ...baseStyles, borderColor };
+  return { ...baseStyles.containerStyle, borderColor };
 };
 
 export { errorStyle };
