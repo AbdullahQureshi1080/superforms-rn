@@ -20,8 +20,8 @@
     "noUnusedLocals": true,
     "useUnknownInCatchVariables": false,
     // "declaration": true,
-    "noEmit": false,
-    "emitDeclarationOnly": false
+    // "noEmit": false,
+    // "emitDeclarationOnly": false
   },
   "exclude": ["example", "dist"]
 }

@@ -16,7 +16,8 @@
   "dependencies": {
     "formik": "^2.2.9",
     "moment": "^2.29.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-native-dropdown-picker": ">=5.4.4"
   },
   "peerDependencies": {
     "react": ">=16.13.1",
