@@ -38,6 +38,7 @@ const DropdownPicker = (props: DropDownProps) => {
     dropDownContainerStyle,
     onSelect,
     items,
+    dropDownPickerProps,
   } = props;
 
   const [open, setOpen] = useState<boolean>(false);
@@ -58,8 +59,9 @@ const DropdownPicker = (props: DropDownProps) => {
         </Text>
       )}
       <DropDownPicker
+        {...dropDownPickerProps}
         flatListProps={{
-          keyExtractor(item, index) {
+          keyExtractor({}, index) {
             return index.toString();
           },
         }}
