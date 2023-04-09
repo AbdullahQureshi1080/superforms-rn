@@ -28,7 +28,7 @@
 
 <br/>
 
-## **Form Date Selector**
+## **Form Date**
 | Property | Type | Description | Required 
 | ----------- | :----: |:-------------- | :------------|
 | name  | ```String```  | The name of the form field, it could be any string value.            | Yes
@@ -39,7 +39,7 @@
 
 <br/>
 
-## **Form Image Selector**
+## **Form Image**
 | Property | Type | Description | Required 
 | ----------- | :----: |:-------------- | :------------|
 | name  | ```String```  | The name of the form field, it could be any string value.            | Yes
@@ -53,6 +53,23 @@
 
 **Note:** All the [image picker properties](https://github.com/react-native-image-picker/react-native-image-picker) are also supported such as maxWidth, maxHeight, quality etc, 
 
+
+<br/>
+
+
+## **FormDropdown**
+
+
+| Property | Type | Description | Required 
+| ----------- | :----: |:-------------- | :------------|
+| name  | ```String```  |  The name of the form field, it could be any string value.             | Yes
+| items  | ```Array```  |  The items for the dropdown picker          | Yes
+| onChange  | ```callback function```  | This function can retrive the value from the dropdown picker whenever there is a new value | No
+| onSelect  | ```callback function```  | This function can retrive the value from the dropdown picker whenever there is a new value, this is used internally for updating form-state | No
+| dropDownContainerStyle  | ```Object```  | The styles object for dropdown container  | No
+| listItemContainerStyle  | ```Object```  | The styles object for list item container  | No
+| style  | ```Object```  | The styles object for dropdown style  | No
+| dropDownPickerProps  | ```Object```  | The dropdown [props](https://hossein-zare.github.io/react-native-dropdown-picker-website/docs/usage) availble for the picker from the picker library | No
 
 <br/>
 
