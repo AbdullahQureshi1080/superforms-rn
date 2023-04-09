@@ -32,6 +32,7 @@ import {
   ImagePickerEnums,
   FormDate,
   FormImage,
+  FormDropdown,
 } from '@superforms/superforms-rn';
 
 const validationSchema = Yup.object().shape({
@@ -46,6 +47,7 @@ const validationSchema = Yup.object().shape({
     .label('Birthdate')
     .nullable(),
   imagepicker: Yup.string().required(),
+  dropdown: Yup.object().nullable().required(),
 });
 
 const App = () => {
@@ -60,6 +62,7 @@ const App = () => {
 
   useEffect(() => {
     const valuesFromAPI = {
+      dropdown: {},
       email: 'tonyAlveraz@gmail.com',
       fullName: 'Tony Alveraz',
       password: 'Test12345@',
@@ -75,9 +78,17 @@ const App = () => {
   return (
     <SafeAreaView style={{backgroundColor: '#f8f8f8', flex: 1}}>
       <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={{height: 600}}>
         <Text style={{color: '#000'}}>renders:{renders}</Text>
-        <View style={{marginTop: 20, marginBottom: 20}}>
+        <View
+          style={{
+            flex: 1,
+            marginTop: 20,
+            marginBottom: 20,
+            // height: 600,
+          }}>
           <Form
             initialValues={values}
             validationSchema={validationSchema}
@@ -100,6 +111,26 @@ const App = () => {
               // imageProps={{resizeMode: 'stretch'}}
               // placeholderImageStyles={{tintColor: 'red'}}
               imageUri={values.imagepicker}
+            />
+            <FormDropdown
+              name="dropdown"
+              label="Dropdown"
+              items={[
+                {label: 'Apple', value: 'apple'},
+                {label: 'Banana', value: 'banana'},
+                {label: 'Orange', value: 'orange'},
+                {label: 'Carrot', value: 'carrot'},
+                {label: 'Dates', value: 'dates'},
+                {label: 'Strawberry', value: 'strawberry'},
+                {label: 'fd', value: 'ds'},
+                {label: 'sada', value: 'sad'},
+                {label: 'ads', value: 'ads'},
+                {label: 'dad', value: 'dsffdsf'},
+                {label: 'asd', value: 'asd'},
+                {label: 'ad', value: 'dsf'},
+              ]}
+              style={{width: '100%'}}
+         
             />
             <SubmitButton name="Login" />
           </Form>

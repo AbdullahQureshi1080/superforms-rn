@@ -51,7 +51,7 @@ npm i react-native-date-picker
 npm i react-native-image-picker
 ``````
 
-Note: To use  ```<FormDateSelector/>``` or ```<FormImageSelector/>``` you must have to install either of the dependent libraries, you can skip it if you do not need the image picker or the date picker, but it would be great to install these so that you do not run into issues later. 
+Note: To use  ```<FormDate/>``` or ```<FormImage/>``` you must have to install either of the dependent libraries, you can skip it if you do not need the image picker or the date picker, but it would be great to install these so that you do not run into issues later. 
 
 
 <br/>
@@ -171,7 +171,7 @@ export default App;
     <br/>
 
 
-* ### **FormDateSelector**
+* ### **FormDate**
 
 
   | Property | Type | Description | Required 
@@ -185,7 +185,7 @@ export default App;
  
 <br/>
 
-* ### **FormImageSelector**
+* ### **FormImage**
 
 
   | Property | Type | Description | Required 
@@ -194,6 +194,22 @@ export default App;
   | getCompletePickerData  | ```Boolean```  | With this prop you can get the complete picker response. By default only the image URI is returned   | No
 
   ``` More <FormImageSelector/> ``` [props](docs/components.md)
+
+ 
+ 
+<br/>
+
+
+* ### **FormDropdown**
+
+
+  | Property | Type | Description | Required 
+  | ----------- | :----: |:-------------- | :------------|
+  | name  | ```String```  |  The name of the form field, it could be any string value.             | Yes
+  | items  | ```Array```  |  The items for the dropdown picker          | Yes
+  
+
+  ``` More <FormDropdown/> ``` [props](docs/components.md)
 
  
  
