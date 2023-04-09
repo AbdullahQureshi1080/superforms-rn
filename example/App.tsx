@@ -34,8 +34,6 @@ import {
   FormImage,
   FormDropdown,
 } from '@superforms/superforms-rn';
-import BaseDropdown from './src/Build/BaseDropdown';
-import DropDownPicker, {ItemType} from 'react-native-dropdown-picker';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required('Email is required').email().label('Email'),
@@ -137,15 +135,6 @@ const App = () => {
             <SubmitButton name="Login" />
           </Form>
         </View>
-        {/* <DropDownPicker
-          open={open}
-          value={value}
-          items={items}
-          setOpen={setOpen}
-          setValue={setValue}
-          setItems={setItems}
-          listMode="SCROLLVIEW"
-        /> */}
       </ScrollView>
     </SafeAreaView>
   );
