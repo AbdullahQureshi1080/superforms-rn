@@ -5,7 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
+<<<<<<<< HEAD:ExampleV2/ios/ExampleV2/Info.plist
 	<string>ExampleV2</string>
+========
+	<string>AwesomeTSProject</string>
+>>>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377:example/ios/AwesomeTSProject/Info.plist
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

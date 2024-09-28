@@ -15,9 +15,15 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+<<<<<<<< HEAD:ExampleV2/ios/ExampleV2.xcodeproj/xcshareddata/xcschemes/ExampleV2.xcscheme
                BuildableName = "ExampleV2.app"
                BlueprintName = "ExampleV2"
                ReferencedContainer = "container:ExampleV2.xcodeproj">
+========
+               BuildableName = "AwesomeTSProject.app"
+               BlueprintName = "AwesomeTSProject"
+               ReferencedContainer = "container:AwesomeTSProject.xcodeproj">
+>>>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377:example/ios/AwesomeTSProject.xcodeproj/xcshareddata/xcschemes/AwesomeTSProject.xcscheme
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +39,15 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+<<<<<<<< HEAD:ExampleV2/ios/ExampleV2.xcodeproj/xcshareddata/xcschemes/ExampleV2.xcscheme
                BuildableName = "ExampleV2Tests.xctest"
                BlueprintName = "ExampleV2Tests"
                ReferencedContainer = "container:ExampleV2.xcodeproj">
+========
+               BuildableName = "AwesomeTSProjectTests.xctest"
+               BlueprintName = "AwesomeTSProjectTests"
+               ReferencedContainer = "container:AwesomeTSProject.xcodeproj">
+>>>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377:example/ios/AwesomeTSProject.xcodeproj/xcshareddata/xcschemes/AwesomeTSProject.xcscheme
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +67,15 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+<<<<<<<< HEAD:ExampleV2/ios/ExampleV2.xcodeproj/xcshareddata/xcschemes/ExampleV2.xcscheme
             BuildableName = "ExampleV2.app"
             BlueprintName = "ExampleV2"
             ReferencedContainer = "container:ExampleV2.xcodeproj">
+========
+            BuildableName = "AwesomeTSProject.app"
+            BlueprintName = "AwesomeTSProject"
+            ReferencedContainer = "container:AwesomeTSProject.xcodeproj">
+>>>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377:example/ios/AwesomeTSProject.xcodeproj/xcshareddata/xcschemes/AwesomeTSProject.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +90,15 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+<<<<<<<< HEAD:ExampleV2/ios/ExampleV2.xcodeproj/xcshareddata/xcschemes/ExampleV2.xcscheme
             BuildableName = "ExampleV2.app"
             BlueprintName = "ExampleV2"
             ReferencedContainer = "container:ExampleV2.xcodeproj">
+========
+            BuildableName = "AwesomeTSProject.app"
+            BlueprintName = "AwesomeTSProject"
+            ReferencedContainer = "container:AwesomeTSProject.xcodeproj">
+>>>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377:example/ios/AwesomeTSProject.xcodeproj/xcshareddata/xcschemes/AwesomeTSProject.xcscheme
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
