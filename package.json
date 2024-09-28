@@ -15,9 +15,10 @@
   },
   "dependencies": {
     "formik": "^2.2.9",
+    "metro-react-native-babel-preset": "^0.77.0",
     "moment": "^2.29.4",
-    "yup": "^0.32.11",
-    "react-native-dropdown-picker": ">=5.4.4"
+    "react-native-dropdown-picker": ">=5.4.4",
+    "yup": "^0.32.11"
   },
   "peerDependencies": {
     "react": ">=16.13.1",
@@ -42,8 +43,9 @@
     "react-native-date-picker": "^4.2.5",
     "react-native-image-picker": "^4.10.0",
     "react-test-renderer": "^18.2.0",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^24.1.2",
     "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.2",
     "typescript": "^4.8.3"
   },
   "keywords": [

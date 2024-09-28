@@ -1,4 +1,4 @@
-import { View, TextInput, StyleProp } from "react-native";
+import { View, TextInput, StyleProp, TextInputProps } from "react-native";
 import React, { ReactNode } from "react";
 
 // Styles Import
@@ -8,7 +8,7 @@ import AppText from "../Text/AppText";
 import { errorStyle } from "../../Styles/BaseStyles";
 import { BaseProps } from "../../Utils/BaseProps";
 
-export interface InputProps extends BaseProps {
+export interface InputProps extends BaseProps, TextInputProps {
   value?: string;
   onChangeText?: (e: React.ChangeEvent | string) => void;
   editable?: boolean;

@@ -18,6 +18,7 @@ const FormImageSelector = (props: FormImageSelectorProps) => {
   return (
     <ImagePicker
       {...props}
+      // @ts-ignore
       onChange={(res) => {
         if (res && res.assets?.length) {
           onChange?.(res);
