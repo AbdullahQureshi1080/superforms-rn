@@ -73,7 +73,7 @@ buck-out/
 dist
 
 #tgz
-# *.tgz
+*.tgz
 
 #.coverage
 
