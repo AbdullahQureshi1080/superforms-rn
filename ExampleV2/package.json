@@ -6,8 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "start": "react-native start",
-    "test": "jest"
+    "start": "react-native start"
   },
   "dependencies": {
     "@react-native-community/eslint-config": "^3.2.0",
