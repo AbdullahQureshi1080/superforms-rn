@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-<<<<<<< HEAD
     "types": [
       "react-native",
       "jest",
@@ -11,10 +10,6 @@
     "lib": [
       "es2019"
     ],
-=======
-    "types": ["react-native", "jest", "@types/jest"],
-    "lib": ["es2019"],
->>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377
     "allowJs": true,
     "jsx": "react-native",
     "isolatedModules": true,
@@ -34,13 +29,8 @@
     // "noEmit": false,
     // "emitDeclarationOnly": false
   },
-<<<<<<< HEAD
   "exclude": [
     "ExampleV2",
     "dist"
   ]
 }
-=======
-  "exclude": ["example", "dist"]
-}
->>>>>>> 8a3170f8c0744f1fc981e50b0abcdcdfdbcf0377
