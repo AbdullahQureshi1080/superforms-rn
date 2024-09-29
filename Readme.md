@@ -247,23 +247,23 @@ export default App;
 <br/>
 
 ## **In Progress** 🚧 👷
-* More Form Components
-  * Dropdown Picker
-  * Country Picker
-  * Modal Picker
-  * Radio Form
-  * Checkboxes
+#### More Form Components
+* Country Picker
+* Modal Picker
+* Radio Form
+* Checkboxes
 
 
 
 ## **Worked On** ✅
-  * Image Picker
-  * Date Picker
-  * TDD: Test cases 
-  * Docs support 
-  * Refactoring ~ Making all unnecesary props as optional 
+* Dropdown Picker
+* Image Picker
+* Date Picker
+* TDD: Test cases 
+* Docs support 
+* Refactoring ~ Making all unnecesary props as optional 
 
-  **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
+ **Note:** Open to suggestions, if there is anything specific you want with a form component, let us know. 
 
 <br/>
 

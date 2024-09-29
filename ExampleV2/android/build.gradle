@@ -1,9 +1,15 @@
 buildscript {
     ext {
-        buildToolsVersion = "34.0.0"
+        // buildToolsVersion = "34.0.0"
+        // minSdkVersion = 23
+        // compileSdkVersion = 34
+        // targetSdkVersion = 34
+        // ndkVersion = "26.1.10909125"
+        // kotlinVersion = "1.9.24"
+        buildToolsVersion = "35.0.0" // Updated to match Android 15 (API level 35)
         minSdkVersion = 23
-        compileSdkVersion = 34
-        targetSdkVersion = 34
+        compileSdkVersion = 35 // Updated to match Android 15 (API level 35)
+        targetSdkVersion = 35 // Updated to match Android 15 (API level 35)
         ndkVersion = "26.1.10909125"
         kotlinVersion = "1.9.24"
     }
